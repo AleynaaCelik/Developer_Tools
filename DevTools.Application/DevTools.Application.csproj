@@ -14,4 +14,8 @@
     <Folder Include="Services\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DevTools.Core\DevTools.Core.csproj" />
+  </ItemGroup>
+
 </Project>
