@@ -8,8 +8,11 @@
 
   <ItemGroup>
     <Folder Include="Mappings\" />
-    <Folder Include="Validators\" />
     <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.5.1" />
   </ItemGroup>
 
   <ItemGroup>
