@@ -1,5 +1,5 @@
-DevTools.API - Başlangıç Rehberi
-🚀 Projeyi Çalıştırma Adımları
+🚀 DevTools.API - Başlangıç Rehberi
+📦 Projeyi Çalıştırma Adımları
 1. Proje Kurulumu
 bash
 Kopyala
@@ -24,7 +24,7 @@ dotnet add package Serilog.AspNetCore
 dotnet add package Serilog.Sinks.Console
 dotnet add package Serilog.Sinks.File
 dotnet add package System.IdentityModel.Tokens.Jwt
-2. Dosya Yapısını Oluştur
+2. Dosya Yapısı
 pgsql
 Kopyala
 Düzenle
@@ -92,17 +92,14 @@ Düzenle
 bash
 Kopyala
 Düzenle
-# İlk migration'ı oluştur
 dotnet ef migrations add InitialCreate
-
-# Veritabanını oluştur ve migrate et
 dotnet ef database update
 5. OpenAI API Anahtarını Ayarla
-OpenAI Platform sayfasına git
+OpenAI platformuna git.
 
-Yeni bir API anahtarı oluştur
+Yeni bir API key oluştur.
 
-appsettings.json içindeki OpenAI:ApiKey alanına bu anahtarı yapıştır
+appsettings.json içindeki OpenAI:ApiKey kısmına yapıştır.
 
 6. Projeyi Çalıştır
 bash
@@ -111,11 +108,11 @@ Düzenle
 # Normal başlatma
 dotnet run
 
-# Veya otomatik yeniden başlatma (watch mode)
+# Watch mode (otomatik yeniden başlatma)
 dotnet watch run
 🔧 Test Etme
 Swagger UI
-https://localhost:7xxx/swagger adresinden erişilebilir (port değişebilir).
+https://localhost:7xxx/swagger (port değişebilir)
 
 Health Check
 bash
@@ -134,7 +131,7 @@ curl -X POST https://localhost:7xxx/api/auth/register \
     "firstName": "Test",
     "lastName": "User"
   }'
-Login
+Giriş (Login)
 bash
 Kopyala
 Düzenle
@@ -191,21 +188,21 @@ GET /api/health/version – Versiyon bilgisi
 
 🐛 Sık Karşılaşılan Sorunlar
 1. OpenAI API Error 401
-API key'in doğru girildiğinden emin ol
+API key doğru mu?
 
-OpenAI hesabında kullanım kredisi olup olmadığını kontrol et
+OpenAI kullanım hakkın var mı?
 
 2. Database Connection Error
 SQL Server LocalDB kurulu mu?
 
-appsettings.json içindeki connection string doğru mu?
+appsettings.json bağlantı bilgileri doğru mu?
 
 3. JWT Token Error
-Secret key en az 32 karakter uzunluğunda mı?
+Secret key en az 32 karakter mi?
 
-Token "Bearer" prefix’i ile gönderiliyor mu?
+Token "Bearer " prefix’i ile mi gönderildi?
 
-Loglar
+📄 Loglar
 bash
 Kopyala
 Düzenle
@@ -215,8 +212,6 @@ dotnet run
 # Dosya logları
 tail -f logs/devtools-*.txt
 🔄 Sonraki Adımlar
-✅ Backend API kurulumu tamamlandı
-
 ⏭️ React frontend geliştirme
 
 ⏭️ Monaco Editor entegrasyonu
@@ -234,13 +229,10 @@ tail -f logs/devtools-*.txt
 💡 Geliştirme Önerileri
 🔁 Caching: Redis ile yanıtları cache’le
 
-🧱 Rate Limiting: AspNetCoreRateLimit paketini entegre et
+🧱 Rate Limiting: AspNetCoreRateLimit paketini kullan
 
 ✔️ Validation: FluentValidation kurallarını detaylandır
 
-📈 Monitoring: Application Insights ile izleme ekle
+📈 Monitoring: Application Insights entegre et
 
-🔐 Security: HTTPS zorunlu kıl, CORS ayarlarını düzenle
-
-
-
+🔐 Security: HTTPS zorunlu kıl, CORS yapılandır
