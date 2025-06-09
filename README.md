@@ -242,5 +242,5 @@ tail -f logs/devtools-*.txt
 
 🔐 Security: HTTPS zorunlu kıl, CORS ayarlarını düzenle
 
-Tebrikler! 🎉 Backend API'n başarıyla hazır. Artık frontend tarafına geçebilirsin!
+
 
