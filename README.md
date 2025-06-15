@@ -1,7 +1,7 @@
 
 📦 Projeyi Çalıştırma Adımları
 1. Proje Kurulumu
-bash
+
 Kopyala
 Düzenle
 # Yeni klasör oluştur ve içine gir
